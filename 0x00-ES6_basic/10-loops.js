@@ -1,8 +1,8 @@
 export default function appendToEachArrayValue(array, appendString) {
-  const myArray = array;
-  for (const [index, val] of myArray.entries()) {
-    myArray[index] = appendString + val;
+  for (const [index, val] of array.entries()) {
+    // eslint-disable-next-line no-param-reassign
+    array[index] = appendString + val;
   }
 
-  return myArray;
+  return array;
 }
