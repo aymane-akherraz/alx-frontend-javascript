@@ -6,7 +6,7 @@ export default function handleProfileSignup(firstName, lastName, fileName) {
     uploadPhoto(fileName)]).then((res) => {
     for (const obj of res) {
       if ('reason' in obj) {
-        obj.value = obj.reason;
+        obj.value = obj.reason.message;
         delete obj.reason;
       }
     }
